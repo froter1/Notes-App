@@ -23,10 +23,11 @@ public class Main {
                     if (Commands.login()) {
                         Main user = new Main(LoginHandling.username);
 
-                        System.out.println(user.username);
-                    }
+                    } break;
+
                 case "register":
                     Commands.register();
+                    break;
             }
         }
     }

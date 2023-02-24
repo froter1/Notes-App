@@ -25,6 +25,7 @@ public class Tests {
         return false;
     }
 
+
     private static void isCriticalFilesExist() {
         Path path = Paths.get("./accounts");
 

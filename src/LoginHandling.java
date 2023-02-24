@@ -12,7 +12,7 @@ public class LoginHandling extends Main{
     public static boolean loginProtocol(String localUsername, String password) {
         username = localUsername;
         if (checkCredentials(username, password)) {
-            System.out.println("Successfully logged in");
+            System.out.println("Successfully logged in to account "+username);
             isLogged = true;
             return true;
         } else {
@@ -34,7 +34,7 @@ public class LoginHandling extends Main{
     }
 
     private static boolean checkCredentials(String username, String password) {
-        if (checkUsername(username) && checkPassword(password)) {
+        if (checkUsername(username) && checkPassword(password, username)) {
             return true;
         } else {
             System.out.println("Wrong login or password");
@@ -43,11 +43,23 @@ public class LoginHandling extends Main{
     }
 
     private static boolean checkUsername(String username) {
-        return username.equals("Dick");
+        return Files.exists(pathCreator(username));
     }
 
-    private static boolean checkPassword(String password) {
-        return password.equals("df");
+    private static boolean checkPassword(String password, String username) {
+        return password.equals(readingFile(pathCreator(username)));
+    }
+
+    private static String readingFile(Path path) {
+        try {
+            return Files.readString(path);
+        } catch (IOException e) {
+            return null;
+        }
+    }
+
+    private static Path pathCreator(String fileName) {
+        return Paths.get("./accounts/"+fileName+".txt");
     }
 
 }
