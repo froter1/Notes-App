@@ -1,8 +1,12 @@
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 public class LoginHandling extends Main{
     protected static String username;
     public LoginHandling(String username) {
         super(username);
-
     }
 
     public static boolean loginProtocol(String localUsername, String password) {
@@ -13,6 +17,19 @@ public class LoginHandling extends Main{
             return true;
         } else {
             return false;
+        }
+    }
+
+    public static void registerProtocol(String username, String password) {
+        if (!Tests.isUserExist(username)) {
+            Path path = Paths.get("./accounts/"+username+".txt");
+
+            try {
+                Files.createFile(path);
+                Files.writeString(path,password);
+            } catch (IOException e) {
+                System.out.println("Something goes wrong, try again...");
+            }
         }
     }
 

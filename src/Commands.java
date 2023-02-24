@@ -6,4 +6,8 @@ public class Commands {
         return LoginHandling.loginProtocol(input.next(), input.next());
     }
 
+    public static void register() {
+        LoginHandling.registerProtocol(input.next(), input.next());
+    }
+
 }
