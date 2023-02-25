@@ -24,7 +24,6 @@ public class Main {
         Main user = new Main(null, false);
         String arg;
 
-
         while (!user.isLogged) {
             arg = input.next();
 
@@ -36,6 +35,14 @@ public class Main {
                 case "register" -> Commands.register();
                 case "help" -> Commands.help();
                 case "exit" -> Commands.exit();
+            }
+        }
+
+        while (user.isLogged) {
+            arg = input.next();
+
+            switch (arg) {
+                case "logout" -> Commands.logout(user);
             }
         }
     }

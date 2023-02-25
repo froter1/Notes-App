@@ -19,4 +19,8 @@ public class Commands {
     public static void exit() {
         System.exit(0);
     }
+
+    public static void logout(Main user) {
+        LoginHandling.logout(user);
+    }
 }

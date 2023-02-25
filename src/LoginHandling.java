@@ -28,6 +28,11 @@ public class LoginHandling {
         }
     }
 
+    public static void logout(Main user) {
+        user.setLogged(false);
+        user.setUsername(null);
+    }
+
     private static boolean checkCredentials(String username, String password) {
         if (checkUsername(username) && checkPassword(password, username)) {
             return true;
