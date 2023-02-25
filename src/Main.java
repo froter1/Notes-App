@@ -29,18 +29,12 @@ public class Main {
             arg = input.next();
 
             switch (arg) {
-                case "login":
+                case "login" -> {
                     user.setUsername(Commands.login());
                     if (user.username != (null)) user.setLogged(true);
-                    break;
-
-                case "register":
-                    Commands.register();
-                    break;
-
-                case "exit":
-                    Commands.exit();
-                    break;
+                }
+                case "register" -> Commands.register();
+                case "exit" -> Commands.exit();
             }
         }
     }
