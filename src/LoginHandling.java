@@ -27,6 +27,7 @@ public class LoginHandling extends Main{
             try {
                 Files.createFile(path);
                 Files.writeString(path,password);
+                System.out.println("User "+username+" registered successfully");
             } catch (IOException e) {
                 System.out.println("Something goes wrong, try again...");
             }
