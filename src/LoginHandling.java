@@ -3,20 +3,14 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class LoginHandling extends Main{
-    protected static String username;
-    public LoginHandling(String username) {
-        super(username);
-    }
+public class LoginHandling {
 
-    public static boolean loginProtocol(String localUsername, String password) {
-        username = localUsername;
+    public static String loginProtocol(String username, String password) {
         if (checkCredentials(username, password)) {
             System.out.println("Successfully logged in to account "+username);
-            isLogged = true;
-            return true;
+            return username;
         } else {
-            return false;
+            return null;
         }
     }
 
