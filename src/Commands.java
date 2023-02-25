@@ -10,6 +10,12 @@ public class Commands {
         LoginHandling.registerProtocol(input.next(), input.next());
     }
 
+    public static void help() {
+        System.out.println("----------");
+        System.out.println("login\nregister\nhelp\nexit");
+        System.out.println("----------");
+    }
+
     public static void exit() {
         System.exit(0);
     }

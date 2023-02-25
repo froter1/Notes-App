@@ -34,6 +34,7 @@ public class Main {
                     if (user.username != (null)) user.setLogged(true);
                 }
                 case "register" -> Commands.register();
+                case "help" -> Commands.help();
                 case "exit" -> Commands.exit();
             }
         }
