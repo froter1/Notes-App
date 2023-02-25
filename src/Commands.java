@@ -10,4 +10,7 @@ public class Commands {
         LoginHandling.registerProtocol(input.next(), input.next());
     }
 
+    public static void exit() {
+        System.exit(0);
+    }
 }

@@ -28,6 +28,10 @@ public class Main {
                 case "register":
                     Commands.register();
                     break;
+
+                case "exit":
+                    Commands.exit();
+                    break;
             }
         }
     }
