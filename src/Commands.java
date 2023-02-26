@@ -23,4 +23,8 @@ public class Commands {
     public static void logout(Main user) {
         LoginHandling.logout(user);
     }
+
+    public static void files(Main user) {
+        FileHandling.checkFiles(user);
+    }
 }

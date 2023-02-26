@@ -43,6 +43,7 @@ public class Main {
 
             switch (arg) {
                 case "logout" -> Commands.logout(user);
+                case "files" -> Commands.files(user);
             }
         }
     }
