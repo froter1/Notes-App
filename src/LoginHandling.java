@@ -21,6 +21,7 @@ public class LoginHandling {
             try {
                 Files.createFile(path);
                 Files.writeString(path,password);
+                Files.createDirectory(Paths.get("./content/"+username));
                 System.out.println("User "+username+" registered successfully");
             } catch (IOException e) {
                 System.out.println("Something goes wrong, try again...");

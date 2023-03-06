@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class Main {
     public static Scanner input = new Scanner(System.in);
-    protected String username;
-    protected boolean isLogged;
+    private String username;
+    private boolean isLogged;
 
 
     public Main(String username, boolean isLogged) {
@@ -13,6 +13,10 @@ public class Main {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public String getUsername() {
+        return this.username;
     }
 
     public void setLogged(boolean logged) {
