@@ -24,26 +24,26 @@ public class Main {
         Main user = new Main(null, false);
         String arg;
 
-        while (!user.isLogged) {
+        while (true) {
             arg = input.next();
 
-            switch (arg) {
-                case "login" -> {
-                    user.setUsername(Commands.login());
-                    if (user.username != (null)) user.setLogged(true);
+            if (!user.isLogged) {
+                switch (arg) {
+                    case "login" -> {
+                        user.setUsername(Commands.login());
+                        if (user.username != (null)) user.setLogged(true);
+                    }
+                    case "register" -> Commands.register();
+                    case "help" -> Commands.help();
+                    case "exit" -> Commands.exit();
                 }
-                case "register" -> Commands.register();
-                case "help" -> Commands.help();
-                case "exit" -> Commands.exit();
-            }
-        }
-
-        while (user.isLogged) {
-            arg = input.next();
-
-            switch (arg) {
-                case "logout" -> Commands.logout(user);
-                case "files" -> Commands.files(user);
+            } else {
+                switch (arg) {
+                    case "logout" -> Commands.logout(user);
+                    case "files" -> Commands.files(user);
+                    case "help" -> Commands.help();
+                    case "exit" -> Commands.exit();
+                }
             }
         }
     }

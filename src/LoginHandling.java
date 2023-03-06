@@ -7,7 +7,7 @@ public class LoginHandling {
 
     public static String loginProtocol(String username, String password) {
         if (checkCredentials(username, password)) {
-            System.out.println("Successfully logged in to account "+username);
+            System.out.println("Successfully logged into account "+username);
             return username;
         } else {
             return null;
