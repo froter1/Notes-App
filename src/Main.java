@@ -47,6 +47,7 @@ public class Main {
                     case "files" -> Commands.files(user);
                     case "help" -> Commands.help();
                     case "exit" -> Commands.exit();
+                    case "new" -> Commands.newNote(user);
                 }
             }
         }

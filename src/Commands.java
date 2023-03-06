@@ -27,4 +27,8 @@ public class Commands {
     public static void files(Main user) {
         FileHandling.checkFiles(user);
     }
+
+    public static void newNote(Main user) {
+        FileHandling.newNote(user);
+    }
 }
