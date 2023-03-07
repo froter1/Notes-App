@@ -26,8 +26,11 @@ public class FileHandling {
     }
 
     public static void newNote(Main user) {
-            System.out.println("Note title:");
+            System.out.print("Note title: ");
             String title = input.nextLine();
+            System.out.println(title);
+            title = title.strip();
+            System.out.println(title);
             if (!checkIllegalChars(title)) {
                 try {
                     Files.createFile(Paths.get("./content/"+user.getUsername()+"/"+title+".txt"));

@@ -3,16 +3,24 @@ public class Commands {
     private final static Scanner input = new Scanner(System.in);
 
     public static String login() {
+        System.out.println("Input your login and password");
         return LoginHandling.loginProtocol(input.next(), input.next());
     }
 
     public static void register() {
+        System.out.println("Input login and password");
         LoginHandling.registerProtocol(input.next(), input.next());
     }
 
     public static void help() {
         System.out.println("----------");
-        System.out.println("login\nregister\nhelp\nexit");
+        System.out.println("""
+                login - Login user (Takes login and password)
+                register - Register user (Takes login and password)
+                help - Show command list
+                files - Show user notes
+                new - Create new note
+                exit - Exit program""");
         System.out.println("----------");
     }
 
