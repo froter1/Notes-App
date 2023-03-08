@@ -48,6 +48,7 @@ public class Main {
                     case "help" -> Commands.help();
                     case "exit" -> Commands.exit();
                     case "new" -> Commands.newNote(user);
+                    case "edit" -> Commands.editNote(user);
                 }
             }
         }

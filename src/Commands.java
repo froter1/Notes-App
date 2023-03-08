@@ -20,6 +20,7 @@ public class Commands {
                 help - Show command list
                 files - Show user notes
                 new - Create new note
+                edit - Edit note
                 exit - Exit program""");
         System.out.println("----------");
     }
@@ -38,5 +39,9 @@ public class Commands {
 
     public static void newNote(Main user) {
         FileHandling.newNote(user);
+    }
+
+    public static void editNote(Main user) {
+        FileHandling.editNote(user);
     }
 }
